@@ -14,6 +14,7 @@ class RequestSettings:
     file_headers: Dict[str, str] = field(default_factory=dict)
     timeout: float = 30.0
     verify: bool = True
+    return_response: bool = True
 
     def with_resource(self, resource_name: str) -> "RequestSettings":
         return RequestSettings(

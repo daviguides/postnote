@@ -13,7 +13,10 @@ class Request(BaseRequest):
     verbose: bool = True
 
     def __init__(
-        self, settings: RequestSettings = None, show_curl: bool = True, verbose: bool = True
+        self,
+        settings: RequestSettings = None,
+        show_curl: bool = True,
+        verbose: bool = True,
     ):
         if settings is None:
             settings = settings_default
@@ -62,4 +65,6 @@ class Request(BaseRequest):
             timeout=timeout,
         )
         disp.show_response(resp, key=key, to_polars=to_polars)
-        # return resp
+
+        if self.settings.return_response:
+            return resp
