@@ -50,7 +50,7 @@ class NotebookDisplay:
         except ValueError:
             if self.verbose:
                 display(Markdown(f"**[ Response - {status} ]** - *non-JSON body*:"))
-            display(response.text)
+                display(response.text)
             return
 
         if to_polars and pl is not None:
@@ -67,5 +67,5 @@ class NotebookDisplay:
                     return
             except Exception:
                 pass
-
-        display(content)
+        if self.verbose:
+            display(content)

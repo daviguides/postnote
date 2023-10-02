@@ -1,6 +1,6 @@
 [project]
 name = "postnote"
-version = "0.5.0"
+version = "0.5.1"
 description = "A lightweight Postman-like client for Jupyter notebooks and Python projects."
 authors = [{ name = "Davi Guides", email = "davi.guides@gmail.com" }]
 readme = "README.md"
