@@ -27,7 +27,7 @@ from postnote import Request
 
 # create a client
 client = Request(
-    base_url="https://sandbox3-domain.com",
+    base_url="https://domain.com",
     api_port=443,
     resource_name="users",
     headers={
