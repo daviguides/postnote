@@ -23,12 +23,12 @@ pip install postnote
 
 ### Basic example
 ```python
-from postnote import Request
+from postnote import Request, RequestSettings
 
-# create a client
-client = Request(
+settings = RequestSettings(
     base_url="https://domain.com",
     api_port=443,
+    api_version="v1",
     resource_name="users",
     headers={
         "Content-Type": "application/json",
@@ -36,6 +36,8 @@ client = Request(
         "X-Client-Secret": "your-secret",
     },
 )
+
+client = Request(settings)
 
 # POST request with JSON payload
 payload = {
