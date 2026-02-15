@@ -1,3 +1,0 @@
-{
-  "python.defaultInterpreterPath": "${env:HOME}/work/bin/uv/envs/postnote/bin/python3",
-}
